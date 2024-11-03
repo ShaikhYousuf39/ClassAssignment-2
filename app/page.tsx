@@ -1,33 +1,11 @@
-import Link from "next/link";
+import React from "react";
+import NavBar from "@/components/NavBar";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
     <div className="min-h-screen flex flex-col">
-      <header className="bg-gray-800 text-white p-4">
-        <div className="container mx-auto flex justify-between items-center">
-          <h1 className="text-2xl font-bold">ITWorld.io</h1>
-          <nav>
-            <ul className=" text-base flex space-x-4">
-              <li>
-                <Link className="hover:text-gray-400" href="/courses">
-                  Courses
-                </Link>
-              </li>
-              <li>
-                <Link className="hover:text-gray-400" href="/registration">
-                  Registration
-                </Link>
-              </li>
-              <li>
-                <Link className="hover:text-gray-400" href="/contact">
-                  Contact
-                </Link>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </header>
-
+      <NavBar />
       <main className="flex-grow container mx-auto p-4">
         <section className="bg-gray-100 py-16">
           <div className="container mx-auto px-4 text-center">
@@ -66,14 +44,7 @@ export default function Home() {
           </div>
         </section>
       </main>
-
-      <footer className="bg-gray-800 text-white p-6">
-        <div className=" container mx-auto text-center">
-          <p className="text-lg">
-            &copy; 2024 ITWorld.io. All rights reserved.
-          </p>
-        </div>
-      </footer>
+    <Footer/>
     </div>
   );
 }
